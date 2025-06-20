@@ -1,6 +1,6 @@
 const SudentPage = () => {
     return (
-        <div className="" >StudentPage</div>
+        <div className="" >StudentPage working</div>
     )
 }
 
