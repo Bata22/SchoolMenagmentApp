@@ -53,8 +53,8 @@ const ClassListPage = () => {
                 </div>
             </td>
             <td className="hidden md:table-cell">{item.capacity}</td>
-            <td className="hidden md:table-cell">{item.grade}</td>
-            <td className="hidden md:table-cell">{item.supervisor}</td>
+            <td className="hidden lg:table-cell">{item.grade}</td>
+            <td className="hidden lg:table-cell">{item.supervisor}</td>
             <td>
                 <div className="flex items-center gap-2">
                     <Link href= {`/list/profesors/${item.id}`}>

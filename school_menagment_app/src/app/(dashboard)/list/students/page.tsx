@@ -36,12 +36,12 @@ const coulmns = [
     {
         header:"Phone", 
         accesor:"phone", 
-        className:"hidden lg:table-cell"
+        className:"hidden md:table-cell"
     },
     {
         header:"Address", 
         accesor:"address", 
-        className:"hidden lg:table-cell"
+        className:"hidden md:table-cell"
     },
       {
         header:"Actions", 
