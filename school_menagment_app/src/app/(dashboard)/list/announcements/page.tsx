@@ -1,4 +1,5 @@
 
+import FormModal from "@/components/FormModel"
 import ListTable from "@/components/ListTable"
 import Paigging from "@/components/Pagging"
 import TableSearch from "@/components/TableSearch"
@@ -45,16 +46,12 @@ const AnnouncementListPage = () => {
             <td className="hidden md:table-cell">{item.date}</td>
             <td>
                 <div className="flex items-center gap-2">
-                    <Link href= {`/list/results/${item.id}`}>
-                    <button className="w-7 h-7 flex items-center justify-center rounded-s-full bg-lamaSky">
-                        <Image src="/view.png" alt="" width={16} height={16}/>
-                    </button>
-                    </Link>
                     {
-                      role == "admin" && (
-                        <button className="w-7 h-7 flex items-center justify-center rounded-s-full bg-lamaPurpule">
-                            <Image src="/delete.png" alt="" width={16} height={16}/>
-                        </button>
+                      role === "admin" && (
+                       <>
+                            <FormModal table="announcement" type="update" data={item}/>
+                            <FormModal table="announcement" type="delete" id={item.id} />
+                        </>
                       )
                     }
                 </div>
@@ -76,10 +73,9 @@ const AnnouncementListPage = () => {
                             <button className="w-8 h-8 flex items-center  justify-between rounded-full bg-lamaYellow relative">
                                 <Image className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" src="/sort.png" alt="" width={14} height={14}/>
                             </button>
-                            {role == "admin" && (
-                                <button className="w-8 h-8 flex items-center justify-between rounded-full bg-lamaYellow relative">
-                                    <Image className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" src="/plus.png" alt="" width={14} height={14}/>
-                                </button>
+                            {role === "admin" && (
+                                <FormModal table="announcement" type="create" />
+
                             )}
                             
                        </div>
