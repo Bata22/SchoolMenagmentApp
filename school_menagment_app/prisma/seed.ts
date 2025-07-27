@@ -6,7 +6,7 @@ async function main() {
   await prisma.admin.create({
     data: {
       id: "bata",
-      username: "",
+      username: "bata",
     },
   });
   await prisma.admin.create({
@@ -58,7 +58,7 @@ async function main() {
   for (let i = 1; i <= 15; i++) {
     await prisma.profesor.create({
       data: {
-        id: `Profesors${i}`, // Unique ID for the teacher
+        id: `profesor${i}`, // Unique ID for the teacher
         username: `profesor${i}`,
         name: `PName${i}`,
         surname: `Psurname${i}`,
